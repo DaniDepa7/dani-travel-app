@@ -6,9 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VoyageArt - Itinerari Artistici",
-  description:
-    "Crea e visualizza percorsi e tappe di viaggio in modo artistico",
+  title: "VoyageManagement - Itinerari turistici",
+  description: "Crea e visualizza i percorsi e le tappe di un tuo viaggio",
 };
 
 export default function RootLayout({

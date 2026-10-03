@@ -16,7 +16,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.1, rotate: [0, 5, -5, 0] }}
             className="text-xl font-black bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"
           >
-            VoyageArt 🗺️
+            VoyageManagement 🗺️
           </motion.span>
         </Link>
 
@@ -51,7 +51,7 @@ export default function Navbar() {
                 : "border-zinc-700 bg-zinc-800 text-zinc-300 hover:border-emerald-500 hover:text-emerald-400"
             }`}
           >
-            Pannello Dashboard
+            Dashboard
           </Link>
         </div>
       </div>
