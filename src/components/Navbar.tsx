@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -11,9 +12,12 @@ export default function Navbar() {
     <nav className="w-full bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50 backdrop-blur-md bg-opacity-80">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-xl font-black bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
+          <motion.span
+            whileHover={{ scale: 1.1, rotate: [0, 5, -5, 0] }}
+            className="text-xl font-black bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"
+          >
             VoyageArt 🗺️
-          </span>
+          </motion.span>
         </Link>
 
         <div className="flex items-center gap-6 text-sm font-medium">
