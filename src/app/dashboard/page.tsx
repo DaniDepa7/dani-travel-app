@@ -84,6 +84,8 @@ export default function Dashboard() {
       setNewItineraryName("");
       // Usiamo l'await per forzare la lista ad aggiornarsi prima di procedere
       await fetchItineraries();
+
+      router.refresh();
     }
   };
 

@@ -38,6 +38,11 @@ export async function POST(request: Request) {
       "INSERT INTO itineraries (name, slug) VALUES (\$1, \$2) RETURNING *",
       [name, slug],
     );
+    // le 3 righe qui sotto servono per svuotare la cache su Vercel
+    revalidatePath("/"); // Forza l'aggiornamento della Home Page
+    revalidatePath("/voyages"); // Forza l'aggiornamento della pagina Esplora itinerari
+    revalidatePath("/dashboard"); // Forza l'aggiornamento della Dashboard
+
     return NextResponse.json(result.rows, { status: 201 });
   } catch (error) {
     return NextResponse.json(
