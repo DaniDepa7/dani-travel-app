@@ -68,6 +68,11 @@ export async function PUT(request: Request) {
     );
     if (result.rowCount === 0)
       return NextResponse.json({ error: "Not trovato" }, { status: 404 });
+    // le seguenti 4 righe servono per aggiornare le pagine su VERCEL
+    revalidatePath("/"); // Aggiorna il nome nella Home Page
+    revalidatePath("/voyages"); // Aggiorna il nome nella pagina Esplora
+    revalidatePath("/dashboard"); // Aggiorna la Dashboard
+    revalidatePath("/voyage/[slug]", "layout"); // Pulisce i vecchi slug delle sottopagine
     return NextResponse.json(result.rows);
   } catch (error) {
     return NextResponse.json(

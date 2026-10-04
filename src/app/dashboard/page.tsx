@@ -127,6 +127,8 @@ export default function Dashboard() {
       setNewItineraryName("");
       setSelectedItinerary(null);
       await fetchItineraries();
+
+      router.refresh();
     }
   };
 
