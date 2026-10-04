@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+// Aggiunge l'import per la gestione della cache
+import { revalidatePath } from "next/cache";
 import { query } from "@/lib/db";
 
 const slugify = (text: string) =>
@@ -80,6 +82,13 @@ export async function DELETE(request: Request) {
     const result = await query("DELETE FROM itineraries WHERE id = \$1", [id]);
     if (result.rowCount === 0)
       return NextResponse.json({ error: "Non trovato" }, { status: 404 });
+
+    //Le 4 righe qui sotto servono per pulire la cache di Vercel
+    revalidatePath("/"); // Aggiorna la Home
+    revalidatePath("/voyages"); // Aggiorna la pagina Esplora Itinerari
+    revalidatePath("/dashboard"); // Aggiorna la Dashboard
+    revalidatePath("/voyage/[slug]", "layout"); // Pulisce le pagine dei singoli itinerari
+
     return NextResponse.json({ message: "Itinerario eliminato con successo" });
   } catch (error) {
     return NextResponse.json(
