@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 interface Itinerary {
   id: number;
@@ -19,6 +20,7 @@ interface Stop {
 }
 
 export default function Dashboard() {
+  const router = useRouter();
   const [itineraries, setItineraries] = useState<Itinerary[]>([]);
   const [selectedItinerary, setSelectedItinerary] = useState<Itinerary | null>(
     null,
@@ -101,6 +103,8 @@ export default function Dashboard() {
         setNewItineraryName("");
       }
       await fetchItineraries();
+      //forza il refresh sul routing delle altre pagine
+      router.refresh();
     }
   };
 
