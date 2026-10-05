@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VoyageManagement - Itinerari turistici",
+  title: "Il viaggiatore - Itinerari turistici",
   description: "Crea e visualizza i percorsi e le tappe di un tuo viaggio",
 };
 
