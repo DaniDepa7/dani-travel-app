@@ -1,7 +1,7 @@
 import { query } from "@/lib/db";
 import ItineraryCard from "@/components/ItineraryCard";
 
-// Definiamo le interfacce per far felice TypeScript ed ESLint
+// Definisco le interfacce per far felice TypeScript ed ESLint
 interface Stop {
   id: number;
   place_name: string;
@@ -49,10 +49,10 @@ export default async function HomePage() {
     <div className="min-h-screen bg-zinc-950 text-white p-8 max-w-4xl mx-auto space-y-8">
       <header className="border-b border-zinc-800 pb-6 mt-4">
         <h1 className="text-4xl font-extrabold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
-          Diari di Viaggio
+          Diario di Viaggio
         </h1>
         <p className="text-zinc-400 text-sm mt-1">
-          {"Gli ultimi percorsi e itinerari artistici condivisi."}
+          {"Gli ultimi percorsi condivisi."}
         </p>
       </header>
 

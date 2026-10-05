@@ -16,7 +16,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.1, rotate: [0, 5, -5, 0] }}
             className="text-xl font-black bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"
           >
-            VoyageManagement 🗺️
+            Il viaggiatore 🗺️
           </motion.span>
         </Link>
 
