@@ -1,5 +1,6 @@
 import { query } from "@/lib/db";
 import ItineraryCard from "@/components/ItineraryCard";
+export const dynamic = "force-dynamic";
 
 // Definisco le interfacce per far felice TypeScript ed ESLint
 interface Stop {
