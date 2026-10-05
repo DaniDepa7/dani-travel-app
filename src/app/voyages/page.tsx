@@ -1,5 +1,6 @@
 import { query } from "@/lib/db";
 import VoyagesList from "@/components/VoyagesList";
+export const dynamic = "force-dynamic";
 
 async function getAllItineraries() {
   const result = await query(
