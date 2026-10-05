@@ -41,7 +41,7 @@ export default function VoyagesList({
               exit={{ opacity: 0 }}
             >
               <Link
-                href={`/voyage/${it.slug}`}
+                href={`/voyages/${it.slug}`}
                 className="group flex justify-between items-center p-5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 rounded-xl transition-all"
               >
                 <div>

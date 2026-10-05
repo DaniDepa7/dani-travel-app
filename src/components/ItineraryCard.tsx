@@ -30,7 +30,7 @@ export default function ItineraryCard({
 
   return (
     <div className="bg-zinc-900 text-white p-6 rounded-2xl border border-zinc-800 shadow-xl space-y-6">
-      <Link href={`/voyage/${slug}`}>
+      <Link href={`/voyages/${slug}`}>
         <h2 className="text-2xl font-bold hover:text-emerald-400 transition-colors cursor-pointer">
           {name}
         </h2>
