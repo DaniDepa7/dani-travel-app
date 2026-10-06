@@ -48,7 +48,7 @@ export default function VoyagesList({
                   <h3 className="text-lg font-bold group-hover:text-emerald-400 transition-colors">
                     {it.name}
                   </h3>
-                  <p className="text-xs text-zinc-500">/voyage/{it.slug}</p>
+                  <p className="text-xs text-zinc-500">/voyages/{it.slug}</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-xs bg-zinc-800 border border-zinc-700 text-zinc-400 px-2.5 py-1 rounded-full">
